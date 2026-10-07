@@ -1,0 +1,9 @@
+8
+true
+false
+1
+1abc
+(\neg false)
+(\wedge true false)
+(\rightarrow 1abc (\vee true false))
+(\leftrightarrow (\neg 1) true)
