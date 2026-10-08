@@ -2,7 +2,7 @@
 
 A lexer and predictive **LL(1) parser implemented from scratch in Python** for a small propositional-logic grammar.
 
-This project was originally developed as an undergraduate compiler/formal-languages assignment and has been reorganized here for archival and portfolio purposes. The original notebook is preserved unchanged in [`original/ll_parser.ipynb`](original/ll_parser.ipynb).
+This project was originally developed as an undergraduate compiler/formal-languages assignment and has been reorganized here for archival and portfolio purposes. The repository preserves the original algorithm, grammar and co-authorship while presenting the implementation in a cleaner source layout.
 
 ## Authors
 
@@ -64,14 +64,16 @@ OPERATORBINARIO -> \rightarrow
 OPERATORBINARIO -> \leftrightarrow
 ```
 
-More details about the FIRST/FOLLOW sets and the predictive table are in [`docs/grammar.md`](docs/grammar.md).
+More details about the FIRST sets and predictive table are in [`docs/grammar.md`](docs/grammar.md).
 
 ## Repository structure
 
 ```text
 .
 ├── README.md
+├── .gitignore
 ├── src/
+│   ├── __init__.py
 │   ├── lexer.py
 │   ├── parser.py
 │   ├── grammar.py
@@ -79,10 +81,9 @@ More details about the FIRST/FOLLOW sets and the predictive table are in [`docs/
 ├── tests/
 │   ├── test_parser.py
 │   └── data/
-├── docs/
-│   └── grammar.md
-└── original/
-    └── ll_parser.ipynb
+│       └── sample.txt
+└── docs/
+    └── grammar.md
 ```
 
 ## Running
@@ -120,9 +121,11 @@ valid
 python -m unittest discover tests
 ```
 
+The cleaned implementation was validated locally with **6 passing tests** during the migration.
+
 ## Portfolio note
 
-The source under `src/` is a structural cleanup of the original notebook implementation: responsibilities were separated into modules and the command-line interface was made local-file friendly. The original algorithm and project concept remain attributable to the original authors.
+The source under `src/` is a structural cleanup of the recovered notebook implementation: responsibilities were separated into modules and the command-line interface was made local-file friendly. The algorithm and project concept remain attributable to the original authors.
 
 ## License
 
